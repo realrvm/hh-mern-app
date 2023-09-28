@@ -1,9 +1,25 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "./reset";
+@import "./variables/global";
+@import "./themes/dark";
+@import "./themes/light";
+
+html {
+  font-family: var(--font-family);
+  font-size: $base-font-size;;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
 }
 
 body {
-  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color-primary);
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 500;
 }
+
+@import "./components/app";
