@@ -8,7 +8,7 @@ import {
 import { StateSchema, StateSchemaKeys } from "./StateSchema";
 
 export function createReducerManager(
-  initialReducers: ReducersMapObject<StateSchema>,
+  initialReducers: ReducersMapObject<StateSchema>
 ) {
   const reducers: ReducersMapObject<StateSchema> = {
     ...initialReducers,
@@ -25,7 +25,7 @@ export function createReducerManager(
       if (keysToRemove.length > 0) {
         state = { ...state };
 
-        for (let key of keysToRemove) {
+        for (const key of keysToRemove) {
           delete state[key];
         }
 

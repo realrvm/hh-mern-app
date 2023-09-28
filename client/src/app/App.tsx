@@ -7,10 +7,10 @@ type AppProps = Record<string, never>;
 export const App: FC<AppProps> = () => {
   const dispatch = useAppDispatch();
 
-  dispatch(login())
+  dispatch(login('roman'))
   return (
     <>
-      <h1>App component</h1>
+      <h1>123</h1>
     </>
   );
 };
